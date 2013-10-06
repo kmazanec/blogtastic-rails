@@ -1,0 +1,21 @@
+<p>
+  <strong>Title:</strong>
+  <%= @post.title %>
+</p>
+ 
+<p>
+  <strong>Text:</strong>
+  <%= @post.content %>
+</p>
+
+<h2>Comments</h2>
+
+<%= render @post.comments %>
+
+
+<h2>Add Comment:</h2>
+<%= render "comments/form" %>
+
+<%= link_to "Back", posts_path(@post) %>
+
+<%= link_to "Edit", edit_post_path(@post) %>
