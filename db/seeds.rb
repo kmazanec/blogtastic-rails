@@ -5,3 +5,14 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+require 'faker'
+
+10.times do
+  new_post = Post.create(title: Faker::Company.bs.capitalize, content: Faker::Lorem.paragraphs.join("\n"))
+
+  rand(5..14).times do
+    new_post.comments.build(commenter: Faker::Name.first_name, body: Faker::Lorem.sentence(12)).save
+  end
+
+end
