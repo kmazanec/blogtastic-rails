@@ -29,7 +29,7 @@ body {
 }
 
 .overlay {
-  position: absolute;
+  position: fixed;
   left: 0;
   right: 0;
   top: 0;
@@ -104,16 +104,22 @@ td {
   border: 1px solid $dark-lavender;
   text-align: justify;
   padding: 10px;
+  background: $cool-blue;
+  color: $lightest-blue;
 }
 
 .comment {
   border: 1px solid $dark-lavender;
   margin: 4px;
-  padding: 4px;
+  padding: 20px;
   float: left;
-  max-width: 200px;
+  width: 230px;
   max-height: 400px;
   text-align: left;
+  background: $cool-blue;
+  color: $lightest-blue;
+  border-radius: 50px;
+
 }
 
 .after_comments {
