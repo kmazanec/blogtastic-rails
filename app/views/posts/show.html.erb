@@ -1,21 +1,23 @@
-<p>
-  <strong>Title:</strong>
+<h2>
   <%= @post.title %>
-</p>
- 
-<p>
-  <strong>Text:</strong>
+ </h2>
+
+<div class="blog-text">
   <%= @post.content %>
-</p>
+</div>
 
-<h2>Comments</h2>
+<div class="comments_container">
+  <h3>Comments</h3>
+  <%= render @post.comments %>
+</div>
 
-<%= render @post.comments %>
+<div class="after_comments">
+  <h4>Add Comment:</h4>
+  <%= render "comments/form" %>
 
-
-<h2>Add Comment:</h2>
-<%= render "comments/form" %>
 
 <%= link_to "Back", posts_path(@post) %>
 
 <%= link_to "Edit", edit_post_path(@post) %>
+
+</div>
