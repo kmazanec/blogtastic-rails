@@ -1,15 +1,15 @@
 <div class="comment">
   <p>
-    <strong>Commenter:</strong>
+    <%= link_to "x", [comment.post, comment], method: :delete, data: { confirm: "Are you sure this is spam?"} %>
+  </p>
+  <p>
+    <strong>Name:</strong>
     <%= comment.commenter %>
   </p>
    
   <p>
-    <strong>Comment:</strong>
+    <strong>>></strong>
     <%= comment.body %>
   </p>
 
-  <p>
-    <%= link_to "Destroy Spam", [comment.post, comment], method: :delete, data: { confirm: "Are you sure this is spam?"} %>
-  </p>
 </div>

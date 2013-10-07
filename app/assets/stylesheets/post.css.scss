@@ -16,10 +16,10 @@ $light-purple: #D0A1EA;
 $dark-purple: #8953A8;
 $cool-purple: #76508A;
 
-$border-radii: 1px;
+$border-radii: 2px;
 
 $fav-font-sans: 'Josefin Sans', sans-serif; // 300 & 400
-$fav-font-serif: 'Josefin Slab', serif; // 400 & 600
+$fav-font-serif: 'Josefin Sans', serif; // 400 & 600
 
 
 body {
@@ -35,6 +35,24 @@ body {
   top: 0;
   bottom: 0;
   background-color: rgba(55,55,55,.4);
+}
+
+.home {
+  position: fixed;
+  top: 10px;
+  width: 80px;
+  height: 20px;
+  z-index: 1;
+  background-color: $dark-blue;
+  border-bottom-right-radius: 2px;
+  border-bottom-left-radius: 2px;
+
+  &:hover {
+    background-color: $dark-lavender;
+  }
+  a {
+    color: $light-purple;
+  }
 }
 
 .container {
@@ -86,7 +104,19 @@ tr {
 
 td {
   padding: 5px 10px;
+  &:first-child {
+    width: 50%;
+    a {
+      padding: 0;
+      background: none;
+      color: $lightest-blue;
 
+      &:hover {
+        color: $light-purple;
+        background: none;
+      }
+    }
+  }
   a {
     display: inline-block;
     padding: 6px 12px;
@@ -111,14 +141,33 @@ td {
 .comment {
   border: 1px solid $dark-lavender;
   margin: 4px;
-  padding: 20px;
+  padding: 8px;
   float: left;
-  width: 230px;
+  width: 240px;
   max-height: 400px;
   text-align: left;
   background: $cool-blue;
   color: $lightest-blue;
-  border-radius: 50px;
+  border-radius: $border-radii;
+
+  p {
+    margin: 8px;
+  }
+
+  strong {
+    color: $light-purple;
+  }
+
+  a {
+    margin-top: -10px;
+    margin-right: -5px;
+    float: right;
+    color: $light-purple;
+    font-size: 1em;
+    &:hover {
+      color: $light-blue;
+    }
+  }
 
 }
 
@@ -126,4 +175,54 @@ td {
   clear: both;
 }
 
+.nav {
+  margin: 20px;
+  a {
+    padding: 6px 12px;
+    background: $light-blue;
+    border-radius: $border-radii;
+
+    &:hover {
+      background: $lightest-blue;
+    }
+  }
+}
+
+
+.input_form {
+
+  input {
+    padding: 5px;
+    font-size: 1em;
+    border: none;
+    background: $lightest-blue;
+    color: $darkest-blue;
+    width: 50%;
+    text-align: center;
+  }
+  textarea {
+    padding: 5px;
+    font-size: 1em;
+    border: none;
+    background: $lightest-blue;
+    color: $darkest-blue;
+    width: 50%;
+  }
+  input[type="submit"]:hover {
+    background: $light-blue;
+  }
+}
+
+.posting {
+  textarea {
+    height: 200px;
+  }
+}
+
+.commenting {
+  textarea {
+    height: 100px;
+  }
+
+}
 

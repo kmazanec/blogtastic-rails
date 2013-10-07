@@ -6,6 +6,12 @@
   <%= @post.content %>
 </div>
 
+<div class="nav">
+<%= link_to "Back", posts_path(@post) %>
+
+<%= link_to "Edit", edit_post_path(@post) %>
+</div>
+
 <div class="comments_container">
   <h3>Comments</h3>
   <%= render @post.comments %>
@@ -16,8 +22,5 @@
   <%= render "comments/form" %>
 
 
-<%= link_to "Back", posts_path(@post) %>
-
-<%= link_to "Edit", edit_post_path(@post) %>
 
 </div>
