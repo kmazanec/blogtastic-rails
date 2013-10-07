@@ -1,11 +1,10 @@
-<h1>Listing posts</h1>
+<h1>All posts</h1>
  
-<%= link_to "New Post!", new_post_path %>
 
 <table>
   <tr>
     <th>Title</th>
-    <th>Text</th>
+    <th>Comments</th>
     <th>Show</th>
     <th>Edit</th>
     <th>Destroy</th>
@@ -13,11 +12,15 @@
  
   <% @posts.each do |post| %>
     <tr>
-      <td><%= post.title %></td>
-      <td><%= post.content %></td>
+      <td><%= link_to post.title, post_path(post) %></td>
+      <td><%= post.comments.count %></td>
       <td><%= link_to 'Show', post_path(post) %></td>
       <td><%= link_to 'Edit', edit_post_path(post) %></td>
       <td><%= link_to 'Destroy', post_path(post), method: :delete, data: {confirm: "Are you sure???"} %></td>
     </tr>
   <% end %>
 </table>
+
+<div class="nav">
+<%= link_to "New Post!", new_post_path %>
+</div>

@@ -1,0 +1,228 @@
+$lightest-lavender: #D0C8EB;
+$darkest-lavender: #412D82;
+$light-lavender: #B7A6EB;
+$dark-lavender: #6E5BAD;
+$cool-lavender: #64578E;
+
+$lightest-blue: #C7D1EA;
+$darkest-blue: #2B447F;
+$light-blue: #A5BAEA;
+$dark-blue: #5770A8;
+$cool-blue: #54648B;
+
+$lightest-purple: #DDC5EA;
+$darkest-purple: #60297F;
+$light-purple: #D0A1EA;
+$dark-purple: #8953A8;
+$cool-purple: #76508A;
+
+$border-radii: 2px;
+
+$fav-font-sans: 'Josefin Sans', sans-serif; // 300 & 400
+$fav-font-serif: 'Josefin Sans', serif; // 400 & 600
+
+
+body {
+  background: url("03372_purplesunsetvillefranche_1280x800.jpg") no-repeat center center fixed;
+  font-family: $fav-font-serif;
+  font-size: 1.2em;
+}
+
+.overlay {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(55,55,55,.4);
+}
+
+.home {
+  position: fixed;
+  top: 10px;
+  width: 80px;
+  height: 20px;
+  z-index: 1;
+  background-color: $dark-blue;
+  border-bottom-right-radius: 2px;
+  border-bottom-left-radius: 2px;
+
+  &:hover {
+    background-color: $dark-lavender;
+  }
+  a {
+    color: $light-purple;
+  }
+}
+
+.container {
+  width: 70%;
+  height: 100%;
+  margin: 10px auto;
+  padding: 10px;
+  background: $light-lavender;
+  border-radius: $border-radii;
+  box-shadow: 0 0 15px $light-purple;
+  opacity: 0.85;
+  text-align: center;
+}
+
+h1 {
+  font-family: $fav-font-sans;
+  font-weight: 300;
+  font-size: 3em;
+}
+
+h2 {
+  font-family: $fav-font-sans;
+  font-weight: 400;
+  font-size: 2.2em;
+}
+
+a {
+  text-decoration: none;
+}
+
+table {
+  width: 100%;
+  background: $cool-blue;
+  color: $lightest-blue;
+  padding: 4px;
+  border-radius: $border-radii;
+  border-collapse: collapse;
+}
+
+th {
+  padding: 10px;
+}
+
+tr {
+  border-bottom: 1px solid $light-lavender;
+  &:first-child {
+  }
+}
+
+td {
+  padding: 5px 10px;
+  &:first-child {
+    width: 50%;
+    a {
+      padding: 0;
+      background: none;
+      color: $lightest-blue;
+
+      &:hover {
+        color: $light-purple;
+        background: none;
+      }
+    }
+  }
+  a {
+    display: inline-block;
+    padding: 6px 12px;
+    background: $light-blue;
+    border-radius: $border-radii;
+
+    &:hover {
+      background: $lightest-blue;
+    }
+  }
+}
+
+.blog-text {
+  border-radius: $border-radii;
+  border: 1px solid $dark-lavender;
+  text-align: justify;
+  padding: 10px;
+  background: $cool-blue;
+  color: $lightest-blue;
+}
+
+.comment {
+  border: 1px solid $dark-lavender;
+  margin: 4px;
+  padding: 8px;
+  float: left;
+  width: 240px;
+  max-height: 400px;
+  text-align: left;
+  background: $cool-blue;
+  color: $lightest-blue;
+  border-radius: $border-radii;
+
+  p {
+    margin: 8px;
+  }
+
+  strong {
+    color: $light-purple;
+  }
+
+  a {
+    margin-top: -10px;
+    margin-right: -5px;
+    float: right;
+    color: $light-purple;
+    font-size: 1em;
+    &:hover {
+      color: $light-blue;
+    }
+  }
+
+}
+
+.after_comments {
+  clear: both;
+}
+
+.nav {
+  margin: 20px;
+  a {
+    padding: 6px 12px;
+    background: $light-blue;
+    border-radius: $border-radii;
+
+    &:hover {
+      background: $lightest-blue;
+    }
+  }
+}
+
+
+.input_form {
+
+  input {
+    padding: 5px;
+    font-size: 1em;
+    border: none;
+    background: $lightest-blue;
+    color: $darkest-blue;
+    width: 50%;
+    text-align: center;
+  }
+  textarea {
+    padding: 5px;
+    font-size: 1em;
+    border: none;
+    background: $lightest-blue;
+    color: $darkest-blue;
+    width: 50%;
+  }
+  input[type="submit"]:hover {
+    background: $light-blue;
+  }
+}
+
+.posting {
+  textarea {
+    height: 200px;
+  }
+}
+
+.commenting {
+  textarea {
+    height: 100px;
+  }
+
+}
+
